@@ -1,0 +1,1152 @@
+attackregex:
+  - id: 1
+    regex: '.*xwork\.MethodAccessor.*'
+    place: 'message'
+    regexid: 8
+    typeid: 8
+    typename: 'Exploit特征'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 1
+    actiondesc: 'Struts2命令执行漏洞攻击'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 2
+    regex: '.*javascript:.*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 2
+    actiondesc: '本地利用型XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 3
+    regex: '.*(onabort|onactivate|onafterprint|onafterupdate|onbeforeactivate|onbeforecopy|onbeforecut|onbeforedeactivate|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|oncellchange|onchange|onclick|oncontextmenu|oncontrol)'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 3
+    actiondesc: '事件型XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 4
+    regex: '.*(eval)+(%20)?=.*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 4
+    actiondesc: '函数可计算某个字符串，并执行其中的的 JavaScript 代码的XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 5
+    regex: '.*(behaviour)+(%20)?=.*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 5
+    actiondesc: '反弹型XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 6
+    regex: '.*(expression)+(%20)?=.*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 6
+    actiondesc: '表单型XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 7
+    regex: '.*<.*>.*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 7
+    actiondesc: '正在使用html标签进行反射XSS攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 8
+    regex: '.*and[%20|\\+].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 8
+    actiondesc: '使用逻辑判断报错进行sql注入攻击'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 9
+    regex: '.*or%20.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 9
+    actiondesc: '正在进行判断sql注入攻击'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 10
+    regex: '.*xor.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 10
+    actiondesc: '正在进行异或判断sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 11
+    regex: '.*sleep[(].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 11
+    actiondesc: '正在进行延时sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 12
+    regex: '.*order.*by.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 12
+    actiondesc: '正在查字段数目的sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 13
+    regex: '.*[%20|\\+]union.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 13
+    actiondesc: '正在联合查询的sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 14
+    regex: '.*select[%20|\\+].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 14
+    actiondesc: '攻击者可能正在进行数据库sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 15
+    regex: '.*database.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 15
+    actiondesc: '正在爆库进行sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 16
+    regex: '.*user[(].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 16
+    actiondesc: '正在查询user表中的数据'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 17
+    regex: '.*version[(].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 17
+    actiondesc: '正在查询版本号进行sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 18
+    regex: '.*from[%20|\\+].*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 18
+    actiondesc: '正在指定查询数据库进行sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 19
+    regex: '.*waitfor.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 19
+    actiondesc: '正在利用时间差进行sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 20
+    regex: '.*(union|select|from).*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 20
+    actiondesc: '正在从表中查询数据进行sql注入'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 21
+    regex: '.*(phpinfo).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 21
+    actiondesc: '显示PHPinfo.php中的内容代码执行攻击'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 22
+    regex: '.*(eval).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 22
+    actiondesc: '调用eval函数进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 23
+    regex: '.*(system[(]).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 23
+    actiondesc: '攻击者调用system函数可调用系统命令'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 24
+    regex: '.*(passthru).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 24
+    actiondesc: '调用passthru()函数来进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 25
+    regex: '.*(base64_encode).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 25
+    actiondesc: '调用base64_encode函数加密进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 26
+    regex: '.*(base64_decode).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 26
+    actiondesc: '调用base64_decode函数解密进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 27
+    regex: '.*(gzinflate).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 27
+    actiondesc: '调用gzinflate函数解密进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 28
+    regex: '.*(fsockopen).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 28
+    actiondesc: '调用fsockopen函数可以用来打开一个socket连接'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 29
+    regex: '.*(stream_socket).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 29
+    actiondesc: '通过stream_socket函数通讯进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 30
+    regex: '.*(echo).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 30
+    actiondesc: '通过echo函数输出进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 31
+    regex: '.*(print).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 31
+    actiondesc: '通过print函数输出进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 32
+    regex: '.*(execute).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 32
+    actiondesc: '该攻击可以将字符串内容当做命令来执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 33
+    regex: '.*(shell_exec).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 33
+    actiondesc: '正在通过shell_exec函数运行命令进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 34
+    regex: '.*(file_get_contents).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 34
+    actiondesc: '通过file_get_contents函数获取文件信息进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 35
+    regex: '.*(require).*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 35
+    actiondesc: '通过require函数加载js进行代码执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 36
+    regex: '.*xp_cmdshell.*'
+    place: 'message'
+    regexid: 3
+    typeid: 3
+    typename: '代码执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 36
+    actiondesc: '通过xp_cmdshell函数扩展存储过程将命令字符串作为操作系统命令 shell 执行'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 37
+    regex: '.*\\.htaccess.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 37
+    actiondesc: '正在读取服务器中的htaccess配置文件，可以网页301重定向、自定义404错误页面、改变文件扩展名、允许/阻止特定的用户或者目录的访问、禁止目录列表、配置默认文档等功能'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 38
+    regex: '.*\\.tar\\.gz.*'
+    place: 'message'
+    regexid: 7
+    typeid: 7
+    typename: '备份文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 38
+    actiondesc: '正在读取服务器中的可能存在的备份文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 39
+    regex: '.*\\.log.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 39
+    actiondesc: '正在读取服务器中的日志文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 40
+    regex: '.*\\.properties.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 40
+    actiondesc: '正在读取服务器中的通用配置文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 41
+    regex: '.*password\\..*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 41
+    actiondesc: '正在读取服务器中的密码配置文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 42
+    regex: '.*wwwroot.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 42
+    actiondesc: '正在读取服务器中的根目录是否为wwwroot'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 43
+    regex: '.*backup.rar.*'
+    place: 'message'
+    regexid: 7
+    typeid: 7
+    typename: '备份文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 43
+    actiondesc: '正在读取服务器中是否存在backup.rar备份文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 44
+    regex: '.*\\.sql.*'
+    place: 'message'
+    regexid: 7
+    typeid: 7
+    typename: '备份文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 44
+    actiondesc: '正在读取服务器中是否存在数据库备份文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 45
+    regex: '.*\\.bak.*'
+    place: 'message'
+    regexid: 7
+    typeid: 7
+    typename: '备份文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 45
+    actiondesc: '正在读取服务器中是否存在备份文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 46
+    regex: '.*etc/passwd.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 46
+    actiondesc: '正在读取服务器中是否存在passwd文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 47
+    regex: '.*\\.\\./.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 47
+    actiondesc: '正在读取服务器中上层目录文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 48
+    regex: '.*\\.ini.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 48
+    actiondesc: '正在读取服务器中是否存在服务器配置文件'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 49
+    regex: '.*\\.conf.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 49
+    actiondesc: '攻击者正在搜索网站配置文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 50
+    regex: '.*config\\.inc.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 50
+    actiondesc: '攻击者正在搜索网站配置文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 51
+    regex: '.*WEB-INF.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 51
+    actiondesc: '攻击者正在搜索网站Web应用程序配置文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 52
+    regex: '.*whoami.*'
+    place: 'message'
+    regexid: 4
+    typeid: 4
+    typename: '命令执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 52
+    actiondesc: '正在通过命令执行查看本用户的信息'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 53
+    regex: '.*history.*'
+    place: 'message'
+    regexid: 4
+    typeid: 4
+    typename: '命令执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 53
+    actiondesc: '攻击者通过命令执行查询历史命令'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 54
+    regex: '.*ipconfig.*'
+    place: 'message'
+    regexid: 4
+    typeid: 4
+    typename: '命令执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 54
+    actiondesc: '正在通过命令执行查询该服务器网卡配置'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 55
+    regex: '.*tasklist.*'
+    place: 'message'
+    regexid: 4
+    typeid: 4
+    typename: '命令执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 55
+    actiondesc: '正在通过命令执行查询该服务器的所有进程'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 56
+    regex: '.*ifconfig.*'
+    place: 'message'
+    regexid: 4
+    typeid: 4
+    typename: '命令执行'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 56
+    actiondesc: '正在通过命令执行查询该服务器网卡配置'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 57
+    regex: '.*/(phpspy|jspspy|aspspy|jspspy|d99|spy)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 57
+    actiondesc: '网站有大马型木马病毒'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 58
+    regex: '.*OgnlContext.*'
+    place: 'message'
+    regexid: 8
+    typeid: 8
+    typename: 'Exploit特征'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 58
+    actiondesc: '正在通过Struts2的EXP扫描该网站'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 59
+    regex: '.*redirect.*'
+    place: 'message'
+    regexid: 8
+    typeid: 8
+    typename: 'Exploit特征'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 59
+    actiondesc: 'Struts2漏洞攻击特征'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 60
+    regex: '.*<!DOCTYPE.*entity.*'
+    place: 'message'
+    regexid: 9
+    typeid: 9
+    typename: 'XXE漏洞'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 60
+    actiondesc: '正在查找XML中是否存在XXE漏洞'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 61
+    regex: '.*xwork\\.MethodAccessor.*'
+    place: 'message'
+    regexid: 8
+    typeid: 8
+    typename: 'Exploit特征'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 61
+    actiondesc: '正在通过Struts2的EXP扫描该网站'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 62
+    regex: '.*\\.svn.*'
+    place: 'message'
+    regexid: 5
+    typeid: 5
+    typename: '敏感文件'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 62
+    actiondesc: '查询服务器中是否SVN敏感文件'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 63
+    regex: '.*information_schema.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 63
+    actiondesc: '正在查找该服务器中information_schema表,其中保存着关于MySQL服务器所维护的所有其他数据库的信息。如数据库名，数据库的表，表栏的数据类型与访问权 限等'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 64
+    regex: '.*into(.*)+(dump|out)file.*'
+    place: 'message'
+    regexid: 2
+    typeid: 2
+    typename: 'SQL注入攻击'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 64
+    actiondesc: '正在通过MySQL到处数据库文件'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 65
+    regex: '.*alert(.*).*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 65
+    actiondesc: '正在通过alert函数弹出对话框'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 66
+    regex: '.*document\\..*'
+    place: 'message'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+    level: 2
+    leveldesc: '中危级别威胁'
+    actionid: 66
+    actiondesc: '正在 查找文档对象 描述当前窗口或指定窗口对象的文档的xss攻击'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 67
+    regex: '.*Command=FileUpload.*'
+    place: 'message'
+    regexid: 10
+    typeid: 10
+    typename: '文件上传漏洞'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 67
+    actiondesc: '查找是否存在文件上传漏洞'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 68
+    regex: '.*/(upload|fileupload)\\.(php|asp|aspx|jsp|do|action).*'
+    place: 'message'
+    regexid: 10
+    typeid: 10
+    typename: '文件上传漏洞'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 68
+    actiondesc: '网站可能存在文件上传漏洞，可导致getshell'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 69
+    regex: '.*include.*'
+    place: 'message'
+    regexid: 11
+    typeid: 11
+    typename: '文件包含漏洞'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 69
+    actiondesc: '该语句会获取指定文件中存在的所有文本/代码/标记，并复制到使用 include 语句的文件中'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 70
+    regex: '.*/(down|download|downfile|readfile)\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 12
+    typeid: 12
+    typename: '文件下载漏洞'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 70
+    actiondesc: '网站可能存在文件任意下载漏洞'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 71
+    regex: '.*\\?(url|link|uri|ru|backurl)=.*'
+    place: 'message'
+    regexid: 13
+    typeid: 13
+    typename: 'URL重定向'
+    level: 1
+    leveldesc: '低危级别威胁'
+    actionid: 71
+    actiondesc: '攻击者把一个URL重定向到另一个URL上去'
+    actionlevel: 1
+    subtype: 'sub_type'
+
+  - id: 72
+    regex: '.*/(HTTrack|harvest|audit|dirbuster|pangolin|nmap|sqln|-scan|hydra|Parser|libwww|BBBike|sqlmap|w3af|owasp|Nikto|fimap|havij|PycURL|zmeu|httperf|bench|SF/|netsparker|BabyKrokodil).*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 72
+    actiondesc: '正在有扫描器进行漏洞扫描'
+    actionlevel: 2
+    subtype: 'sub_type'
+
+  - id: 73
+    regex: '.*/(muma|dump|([1-9]\\d{0,2}|0))+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 73
+    actiondesc: '网站有小马木马病毒，可能被入侵'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 74
+    regex: '.*/(netspy|)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 74
+    actiondesc: '网站有网络扫描类木马'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 75
+    regex: '.*/(cmd)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 75
+    actiondesc: '网站有命令行木马病毒，可执行命令操作'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 76
+    regex: '.*/(nc)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 76
+    actiondesc: '网站有监听类木马病毒，可对网站进行监听'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 77
+    regex: '.*/(chopper|c|x|shell|out)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 77
+    actiondesc: '网站有菜刀类木马病毒，可以使用菜刀远程连接'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+  - id: 78
+    regex: '.*/(database|sql)+\\.(php|aspx|jsp|asp)+.*'
+    place: 'message'
+    regexid: 6
+    typeid: 6
+    typename: '木马文件'
+    level: 3
+    leveldesc: '高危级别威胁'
+    actionid: 78
+    actiondesc: '网站有数据库类型木马病毒，可以远程连接数据库'
+    actionlevel: 3
+    subtype: 'sub_type'
+
+
+
+scanerregex:
+  # Bots Pattern '/name-0.0'
+  # HTTrack|harvest|audit|dirbuster|pangolin|nmap|
+
+  - regex: '.*?HTTrack.*?'
+    regexid: 1
+    typeid: 1
+    typename: 'HTTrack'
+
+  - regex: '.*?harvest.*?'
+    regexid: 2
+    typeid: 2
+    typename: 'harvest'
+
+  - regex: '.*?audit.*?'
+    regexid: 3
+    typeid: 3
+    typename: 'audit'
+
+  - regex: '.*?dirbuster.*?'
+    regexid: 4
+    typeid: 4
+    typename: 'dirbuster'
+
+  - regex: '.*?pangolin.*?'
+    regexid: 5
+    typeid: 5
+    typename: 'pangolin'
+
+  - regex: '.*?nmap.*?'
+    regexid: 6
+    typeid: 6
+    typename: 'nmap'
+
+  - regex: '.*sqln.*'
+    regexid: 7
+    typeid: 7
+    typename: 'sqln'
+
+  - regex: '.*-scan.*'
+    regexid: 8
+    typeid: 8
+    typename: '-scan'
+
+  - regex: '.*hydra.*'
+    regexid: 9
+    typeid: 9
+    typename: 'hydra'
+
+  - regex: '.*Parser.*'
+    regexid: 10
+    typeid: 10
+    typename: 'Parser'
+
+  - regex: '.*libwww.*'
+    regexid: 11
+    typeid: 11
+    typename: 'libwww'
+
+  - regex: '.*BBBike.*'
+    regexid: 12
+    typeid: 12
+    typename: 'BBBike'
+
+  - regex: '.*sqlmap.*'
+    regexid: 13
+    typeid: 13
+    typename: 'sqlmap'
+
+  - regex: '.*w3af.*'
+    regexid: 14
+    typeid: 14
+    typename: 'w3af'
+
+  - regex: '.*owasp.*'
+    regexid: 15
+    typeid: 15
+    typename: 'owasp'
+
+  - regex: '.*Nikto.*'
+    regexid: 16
+    typeid: 16
+    typename: 'Nikto'
+
+  - regex: '.*fimap.*'
+    regexid: 17
+    typeid: 17
+    typename: 'fimap'
+
+  - regex: '.*havij.*'
+    regexid: 18
+    typeid: 18
+    typename: 'havij'
+
+  - regex: '.*PycURL.*'
+    regexid: 19
+    typeid: 19
+    typename: 'PycURL'
+
+  - regex: '.*zmeu.*'
+    regexid: 1
+    typeid: 1
+    typename: 'zmeu'
+
+  - regex: '.*httperf.*'
+    regexid: 20
+    typeid: 20
+    typename: 'httperf'
+
+  - regex: '.*bench.*'
+    regexid: 21
+    typeid: 21
+    typename: 'bench'
+
+  - regex: '.*SF/.*'
+    regexid: 22
+    typeid: 22
+    typename: 'SF/'
+
+  - regex: '.*netsparker.*'
+    regexid: 23
+    typeid: 23
+    typename: 'netsparker'
+
+  - regex: '.*BabyKrokodil.*'
+    regexid: 24
+    typeid: 24
+    typename: 'BabyKrokodil'
+
+
+other:
+  # Firefox
+  - regex: '(Fennec)/(\d+)\.(\d+)\.?([ab]?\d+[a-z]*)'
+    typename: 'Firefox Mobile'
+

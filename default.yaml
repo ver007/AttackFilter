@@ -1,0 +1,466 @@
+attackregex:
+
+    ## level = 危险等级
+    ## regex = 匹配规则
+    ## regexid = 规则ID
+    ## typeid = 类型ID
+    ## typename = 类型名称
+
+  - level:  2
+    regex: '.*javascript:.*'
+    regexid: 1
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+
+  - level:  2
+    regex: '.*(onabort|onactivate|onafterprint|onafterupdate|onbeforeactivate|onbeforecopy|onbeforecut|onbeforedeactivate|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|oncellchange|onchange|onclick|oncontextmenu|oncontrolselect|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondeactivate|ondrag|ondragend|ondragenter|ondragleave|ondragover|ondragstart|ondrop|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onfocusin|onfocusout|onhelp|onkeydown|onkeypress|onkeyup|onlayoutcomplete|onload|onlosecapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onmove|onmoveend|onmovestart|onpaste|onpropertychange|onreadystatechange|onreset|onresize|onresizeend|onresizestart|onrowenter|onrowexit|onrowsdelete|onrowsinserted|onscroll|onselect|onselectionchange|onselectstart|onstart|onstop|onsubmit|onunload|javascript|eval|behaviour|expression)+(%20)?=.*'
+    regexid: 2
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+
+  - level:  2
+    regex: '.*<.*>.*'
+    regexid: 3
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+
+  - level:  3
+    regex: '.*and[%20|\\+].*'
+    regexid: 4
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*or%20.*'
+    regexid: 5
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*xor.*'
+    regexid: 6
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*sleep[(].*'
+    regexid: 7
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*order.*by.*'
+    regexid: 8
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*[%20|\\+]union.*'
+    regexid: 9
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*select[%20|\\+].*'
+    regexid: 10
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*database.*'
+    regexid: 11
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*user[(].*'
+    regexid: 12
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*version[(].*'
+    regexid: 13
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*from[%20|\\+].*'
+    regexid: 14
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*waitfor.*'
+    regexid: 15
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+# /plus/search.php keyword=as&typeArr[111%3D@`\\'`)+UnIon+seleCt+1,2,3,4,5,6,7,8,9,10,userid,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,pwd,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42+from+`%23@__admin`%23@`\\'`+]=a
+
+  - level:  3
+    regex: '.*(union|select|from).*'
+    regexid: 16
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*(phpinfo|eval|system[(]|passthru|base64_encode|base64_decode|gzinflate|fsockopen|stream_socket|echo|print|execute|shell_exec|file_get_contents|require).*'
+    regexid: 16
+    typeid: 3
+    typename: '代码执行'
+
+  - level:  3
+    regex: '.*xp_cmdshell.*'
+    regexid: 17
+    typeid: 3
+    typename: '代码执行'
+
+  - level:  1
+    regex: '.*\\.htaccess.*'
+    regexid: 18
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  2
+    regex: '.*\\.tar\\.gz.*'
+    regexid: 19
+    typeid: 7
+    typename: '备份文件'
+
+  - level:  1
+    regex: '.*\\.log.*'
+    regexid: 20
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*\\.properties.*'
+    regexid: 21
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*password\\..*'
+    regexid: 22
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*wwwroot.*'
+    regexid: 23
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  2
+    regex: '.*backup.rar.*'
+    regexid: 24
+    typeid: 7
+    typename: '备份文件'
+
+  - level:  2
+    regex: '.*\\.sql.*'
+    regexid: 25
+    typeid: 7
+    typename: '备份文件'
+
+  - level:  2
+    regex: '.*\\.bak.*'
+    regexid: 26
+    typeid: 7
+    typename: '备份文件'
+
+  - level:  1
+    regex: '.*etc/passwd.*'
+    regexid: 27
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*\\.\\./.*'
+    regexid: 28
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*\\.ini.*'
+    regexid: 29
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*\\.conf.*'
+    regexid: 30
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*config\\.inc.*'
+    regexid: 31
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  1
+    regex: '.*WEB-INF.*'
+    regexid: 32
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  3
+    regex: '.*whoami.*'
+    regexid: 33
+    typeid: 4
+    typename: '命令执行'
+
+  - level:  3
+    regex: '.*history.*'
+    regexid: 34
+    typeid: 4
+    typename: '命令执行'
+
+  - level:  3
+    regex: '.*ipconfig.*'
+    regexid: 35
+    typeid: 4
+    typename: '命令执行'
+
+  - level:  3
+    regex: '.*tasklist.*'
+    regexid: 36
+    typeid: 4
+    typename: '命令执行'
+
+  - level:  3
+    regex: '.*ifconfig.*'
+    regexid: 37
+    typeid: 4
+    typename: '命令执行'
+
+  - level:  3
+    regex: '.*/(d99|cmd|nc|database|sql|dump|muma|phpspy|jspspy|aspspy|jspspy|netspy|out|chopper|c|x|shell|spy|([1-9]\\d{0,2}|0))+\\.(php|aspx|jsp|asp)+.*'
+    regexid: 38
+    typeid: 6
+    typename: '木马文件'
+
+  - level:  3
+    regex: '.*OgnlContext.*'
+    regexid: 39
+    typeid: 8
+    typename: 'Exploit特征'
+
+  - level:  3
+    regex: '.*redirect.*'
+    regexid: 40
+    typeid: 8
+    typename: 'Exploit特征'
+
+  - level:  2
+    regex: '.*<!DOCTYPE.*entity.*'
+    regexid: 41
+    typeid: 9
+    typename: 'XXE漏洞'
+
+  - level:  3
+    regex: '.*xwork\\.MethodAccessor.*'
+    regexid: 42
+    typeid: 8
+    typename: 'Exploit特征'
+
+  - level:  1
+    regex: '.*\\.svn.*'
+    regexid: 43
+    typeid: 5
+    typename: '敏感文件'
+
+  - level:  3
+    regex: '.*information_schema.*'
+    regexid: 44
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  3
+    regex: '.*into(.*)+(dump|out)file.*'
+    regexid: 45
+    typeid: 2
+    typename: 'SQL注入攻击'
+
+  - level:  2
+    regex: '.*alert(.*).*'
+    regexid: 46
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+
+  - level:  2
+    regex: '.*document\\..*'
+    regexid: 47
+    typeid: 1
+    typename: 'XSS跨站脚本攻击'
+
+  - level:  3
+    regex: '.*Command=FileUpload.*'
+    regexid: 48
+    typeid: 10
+    typename: '文件上传漏洞'
+
+  - level:  3
+    regex: '.*/(upload|fileupload)\\.(php|asp|aspx|jsp|do|action).*'
+    regexid: 49
+    typeid: 10
+    typename: '文件上传漏洞'
+
+  - level:  3
+    regex: '.*include.*'
+    regexid: 50
+    typeid: 11
+    typename: '文件包含漏洞'
+
+  - level:  2
+    regex: '.*/(down|download|downfile|readfile)\\.(php|aspx|jsp|asp)+.*'
+    regexid: 51
+    typeid: 12
+    typename: '文件下载漏洞'
+
+  - level:  1
+    regex: '.*\\?(url|link|uri|ru|backurl)=.*'
+    regexid: 52
+    typeid: 13
+    typename: 'URL重定向'
+
+
+
+scanerregex:
+  # Bots Pattern '/name-0.0'
+  # HTTrack|harvest|audit|dirbuster|pangolin|nmap|
+
+  - regex: '.*?HTTrack.*?'
+    regexid: 1
+    typeid: 1
+    typename: 'HTTrack'
+
+  - regex: '.*?harvest.*?'
+    regexid: 2
+    typeid: 2
+    typename: 'harvest'
+
+  - regex: '.*?audit.*?'
+    regexid: 3
+    typeid: 3
+    typename: 'audit'
+
+  - regex: '.*?dirbuster.*?'
+    regexid: 4
+    typeid: 4
+    typename: 'dirbuster'
+
+  - regex: '.*?pangolin.*?'
+    regexid: 5
+    typeid: 5
+    typename: 'pangolin'
+
+  - regex: '.*?nmap.*?'
+    regexid: 6
+    typeid: 6
+    typename: 'nmap'
+
+  - regex: '.*sqln.*'
+    regexid: 7
+    typeid: 7
+    typename: 'sqln'
+
+  - regex: '.*-scan.*'
+    regexid: 8
+    typeid: 8
+    typename: '-scan'
+
+  - regex: '.*hydra.*'
+    regexid: 9
+    typeid: 9
+    typename: 'hydra'
+
+  - regex: '.*Parser.*'
+    regexid: 10
+    typeid: 10
+    typename: 'Parser'
+
+  - regex: '.*libwww.*'
+    regexid: 11
+    typeid: 11
+    typename: 'libwww'
+
+  - regex: '.*BBBike.*'
+    regexid: 12
+    typeid: 12
+    typename: 'BBBike'
+
+  - regex: '.*sqlmap.*'
+    regexid: 13
+    typeid: 13
+    typename: 'sqlmap'
+
+  - regex: '.*w3af.*'
+    regexid: 14
+    typeid: 14
+    typename: 'w3af'
+
+  - regex: '.*owasp.*'
+    regexid: 15
+    typeid: 15
+    typename: 'owasp'
+
+  - regex: '.*Nikto.*'
+    regexid: 16
+    typeid: 16
+    typename: 'Nikto'
+
+  - regex: '.*fimap.*'
+    regexid: 17
+    typeid: 17
+    typename: 'fimap'
+
+  - regex: '.*havij.*'
+    regexid: 18
+    typeid: 18
+    typename: 'havij'
+
+  - regex: '.*PycURL.*'
+    regexid: 19
+    typeid: 19
+    typename: 'PycURL'
+
+  - regex: '.*zmeu.*'
+    regexid: 1
+    typeid: 1
+    typename: 'zmeu'
+
+  - regex: '.*httperf.*'
+    regexid: 20
+    typeid: 20
+    typename: 'httperf'
+
+  - regex: '.*bench.*'
+    regexid: 21
+    typeid: 21
+    typename: 'bench'
+
+  - regex: '.*SF/.*'
+    regexid: 22
+    typeid: 22
+    typename: 'SF/'
+
+  - regex: '.*netsparker.*'
+    regexid: 23
+    typeid: 23
+    typename: 'netsparker'
+
+  - regex: '.*BabyKrokodil.*'
+    regexid: 24
+    typeid: 24
+    typename: 'BabyKrokodil'
+
+
+other:
+  # Firefox
+  - regex: '(Fennec)/(\d+)\.(\d+)\.?([ab]?\d+[a-z]*)'
+    typename: 'Firefox Mobile'
+
+
