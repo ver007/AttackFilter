@@ -1,1 +1,1 @@
-官方文档：http://logs.jeary.org
+Logstash Pligin ，请根据logstash插件安装模式进行导入，该插件目前只支持weblog日志，可通过配置支持其他流量日志
